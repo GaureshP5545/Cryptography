@@ -1,0 +1,16 @@
+1	su
+2	git clone https://github.com/rshrimp/-Asset-Transfer-app-using-hyperlegder-Fabric-Blockchain.git asset-transfer-app
+3	git clone https://github.com/rshrimp/-Asset-Transfer-app-using-hyperlegder-Fabric-Blockchain.git asset-transfer-app
+4	cd asset-transfer-app/
+5	./scripts/c
+6	./scripts/cleanup.sh
+7	./scripts/createArtifacts.sh
+8	./scripts/start_network.sh
+9	open new terminal
+10	cd asset-transfer-app/
+11	./scripts/setupNetwork.sh
+12	docker exec -it client.org1 bash
+13	fabric-ca-client register --id.name admin2 --id.type user --id.affiliation org1 --id.secret adminpw
+14	fabric-ca-client register --id.name admin3 --id.type user --id.affiliation org1 --id.secret adminpw
+15	adminpw
+16	fabric-ca-client enroll -u http://admin3:adminpw@ca.Org1:7054 -M Admin3@Org1.com/msp
