@@ -1,0 +1,18 @@
+Step 1 2 routers (1841), 4 pcs, 2 access point (AccessPoint-PT)
+Step 2: Click on CS > Config > Port1 > Change SSID to CS and Select Authentication as WPA2-PSK enter password as Ciscopacket1
+Step 3: Click on IT > Config > Port1 > Change SSID to IT and Select Authentication as WPA2-PSK enter password as Ciscopacket2
+Step 4: Click on CS-1 > Desktop > IP Configuration > Set IPv4 Address and Default Gateway.
+Step 5: Click on CS-2 > Desktop > IP Configuration > Set IPv4 Address and Default Gateway
+Step 6: Click on IT-1 > Desktop > IP Configuration > Set IPv4 Address and Default Gateway
+Step 7: Click on IT-2 > Desktop > IP Configuration > Set IPv4 Address and Default Gateway
+Step 8: Click on CS-1 > Physical > Turn OFF the PC > remove previous component and replace with WMP300N. Same for CS-2, IT-1 and IT-2
+Step 9: Click on CS-1 > Config > wireless0 > Change SSID to CS and select Authentication as WPA2-PSK and enter password Ciscopacket1. To this same for CS-2.
+Step 10: Click on IT-1 > Config > wireless0 > Change SSID to IT and select Authentication as WPA2-PSK and enter password Ciscopacket2. To this same for IT-2.
+Step 11: Connect routers with Accesspoints-PT with Copper Cross Over
+Step 12: Click on Router0 > Config > Fastethernet0/0 > Click on On > Enter IPv4 address as 192.168.10.1
+Step 12: Click on Router1 > Config > Fastethernet0/0 > Click on On > Enter IPv4 address as 171.16.10.1
+Step 13: Connect Router0 and Router1 using Serial DTE
+Step 14: Click on Router0 > Config > Serial0/0/0 > Click on On > Enter IPv4 address as 20.0.0.1 > Set Clock rate to 64000
+Step 15: Click on Router1 > Config > Serial0/0/0 > Click on On > Enter IPv4 address as 20.0.0.2 > Set Clock rate to 64000
+Step 17: Click on Router0 > Config > RIP > Add networks.
+Step 18: Click on Router0 > Config > RIP > Add networks

@@ -1,0 +1,24 @@
+
+
+Step 1: Take 2 router Wireless router WRT 300N. 5 pcs. Connect both routers with each other with 
+copper cross over cable.
+Step 2: Click on the Wireless Router0 > GUI > Wireless > Basic Wireless Settings > Change 
+Network Name (SSID) to CS. Click on Save Settings.
+Step 3: Click on the Wireless Router0 > GUI > Wireless > Wireless Security > Change 
+Security Mode to WPA2 Personal. Add Passphrase as ciscorouter1. Click on Save Settings. 
+Step 4: Click on the Wireless Router0 > GUI > Administration > Management > Enabled 
+Remote Management. Click on Save Settings.
+Step 5: Click on the Wireless Router1 > GUI > Wireless > Basic Wireless Settings > Change 
+Network Name (SSID) to IT. Click on Save Settings.
+Step 6: Click on the Wireless Router1 > GUI > Wireless > Wireless Security > Change 
+Security Mode to WPA2 Personal. Add Passphrase as ciscorouter2. Click on Save Settings.
+Step 7: Click on the Wireless Router0 > GUI > Administration > Management > Enabled 
+Remote Management. Click on Save Settings. Step 8: Click on PC0 > Physical > Turn OFF the PC > remove previous component and 
+replace with WMP300N > Power on the PC. Do this for all PC’s
+Step 9: Click on PC0 > Desktop > PC Wireless > Connect > Click on Refresh.
+Step 10: Select CS and Click on the Connect
+Step 11: Enter Pre-Shared key for CS i.e. ciscorouter1. Do this same Process for PC 2
+Step 11: Click on PC1 > Desktop > PC Wireless > Connect > Click on Refresh
+Step 12: Select IT and Click on the Connect
+Step 13: Enter Pre-Shared key for CS i.e. ciscorouter1. Do this same Process for PC3 and PC4
+Step 15: Send message and check the Connection

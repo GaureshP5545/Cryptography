@@ -1,0 +1,8 @@
+Connections - 
+1 router 2901
+
+Click on Router0 > config > change Hostname to myrouter
+Click on Router0 > config >GigabitEthernet0/0 > Enter IPv4 Address 192.168.1.1 and 
+make Port status on.
+Click on Router0 > config >GigabitEthernet0/0 > Enter IPv4 Address 10.1.1.1 and make 
+Port status on
