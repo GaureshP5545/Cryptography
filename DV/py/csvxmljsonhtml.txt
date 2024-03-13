@@ -1,0 +1,69 @@
+import pandas as pd
+df = pd.read_csv("D://iris.csv")
+df.head()
+
+# read json data
+import json
+data = '''{
+"name" : "Ossama",
+"phone" : { "type" : "intl", "number" : "+971 50 244 5467"},
+"email" : {"hide" : "No" }
+}'''
+info = json.loads(data)
+print ('Name:',info["name"])
+print ('Hide:',info["email"]["hide"])
+# print ('Hide:',info["email"])
+
+xmldata = """
+<?xml version="1.0"?>
+<data>
+<student
+name="Omar">
+<rank>2</rank>
+<year>2017</year>
+<GPA>3.5</GPA>
+<concentration name="Networking" 
+Semester="7"/> </student>
+<student name="Ali">
+<rank>3</rank>
+<year>2016</year>
+<GPA>2.8</GPA>
+<concentration name="Security" 
+Semester="6"/>
+</student>
+<student name="Osama">
+<rank>1</rank>
+<year>2018</year>
+<GPA>3.7</GPA>
+<concentration name="App Development" 
+Semester="8"/> </student>
+</data>
+""".strip()
+from xml.etree import ElementTree as ET 
+stuff = ET.fromstring(xmldata)
+lst = stuff.findall('student')
+print ('Students count:', len(lst))
+for item in lst:
+ print ("\nName:", item.get("name"))
+ print ('concentration:', item.
+ find("concentration").get("name"))
+ print ('Rank:', item.find('rank').text)
+ print ('GPA:', item.find("GPA").text)
+
+# read html data
+import urllib 
+from bs4 import BeautifulSoup
+# response = urllib.request.urlopen('https://pandas.pydata.org')
+response = urllib.request.urlopen('https://en.wikipedia.org/wiki/Giant_panda')
+html_doc = response.read()
+# print (html_doc[:300])
+soup = BeautifulSoup(html_doc, 'html.parser')
+# print ("\n") 
+counter=0
+for link in soup.findAll("p"):
+ print(link)
+ if counter<10: 
+ counter+=1
+ continue
+ else:
+ break

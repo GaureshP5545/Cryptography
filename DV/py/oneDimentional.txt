@@ -1,0 +1,58 @@
+import numpy as np
+import pandas as pd
+Series1 = pd.Series(np.random.randn(4), index=['a','b', 'c', 'd'])
+print(Series1)
+print(Series1.index)
+
+Series2 = pd.Series(np.random.randn(4))
+print(Series2)
+print(Series2.index)
+print (" \n Series slicing ")
+print (Series1[:3])
+print ("\nIndex accessing")
+print (Series1[[3,1,0]])
+print("\n Single index")
+x = Series1[0]
+print (x)
+
+print ("\nSeries Sample operations")
+print ("\n Series values greater than the mean: %.4f"% Series1.mean())
+print (Series1 [Series1> Series1.mean()])
+print ("\n Series values greater than theMeadian:%.4f" % Series1.median())
+print (Series1 [Series1> Series1.median()])
+print ("\nExponential value ")
+Series1Exp = np.exp(Series1)
+print (Series1Exp)
+
+print ("\nSeries of non declared index")
+SeriesDict1 = pd.Series(dict)
+print(SeriesDict1)
+print ("\nSeries of declared index")
+SeriesDict2 = pd.Series(dict, index=['y', 'm', 'd','s'])
+print(SeriesDict2)
+
+print ("\nUse the get and set methods to access" "a series values by index label\n")
+SeriesDict2 = pd.Series(dict, index=['y', 'm', 'd','s'])
+print (SeriesDict2['y']) 
+SeriesDict2['y']=1999 
+print (SeriesDict2) 
+print (SeriesDict2.get('y'))
+
+print ("\n create series form scalar value ")
+Scl = pd.Series(8., index=['a', 'b', 'c', 'd'])
+print (Scl)
+
+SerX = pd.Series([1,2,3,4], index=['a', 'b', 'c', 'd'])
+print ("Addition");
+print( SerX + SerX)
+print ("Addition with non-matched label");
+print (SerX[1:] + SerX[:-1])
+print ("Multiplication");
+print (SerX * SerX)
+print ("Exponential");
+print (np.exp(SerX))
+
+std = pd.Series([77,89,65,90], name='StudentsMarks')
+print (std.name)
+std = std.rename("Marks")
+print (std.name
