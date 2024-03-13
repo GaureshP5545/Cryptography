@@ -1,71 +1,72 @@
-Connections - 
-3 PC, 2 switch 2960, 2 router 1841,wireless router WRT300N
+WEP
 
-Click on PC0 > Desktop > IP Configuration > set IPv4 Address and Default Gateway.
-IP address  - 192.168.1.2
-Subnet mask - 255.255.255.0
-Default gateway- 192.168.1.1
-
-Click on PC1 > Desktop > IP Configuration > set IPv4 Address and Default Gateway
-IP address  - 192.168.2.2
-Subnet mask - 255.255.255.0
-Default gateway- 192.168.2.1
-
-Click on Router0 > Config > FastEthernet 0/0 > set IPv4 Address and On the Port
-config => fastEthernet0/0 =>
-IP address  - 192.168.1.1
-Subnet mask - 255.255.255.0   =>    on
-
-Click on Router1 > Config > FastEthernet 0/0 > set IPv4 Address and On the Port 
-Status
-config => fastEthernet0/0 =>
-IP address  - 192.168.2.1
-Subnet mask - 255.255.255.0   =>    on
-
-Click on Router0 > Config > Serial 0/0/0 > set IPv4 Address and On the Port Status. 
-Clock Rate = 64000
-IP address  - 10.0.0.1
-Subnet mask - 255.0.0.0
+cpmponents
+2 X pc 
+2 X 2960-24TT Switch
+2 X 1841 Router
 
 
-Click on Router1 > Config > Serial 0/0/0 > set IPv4 Address and On the Port Status. 
-Clock Rate = 64000
-IP address  - 10.0.0.2
-Subnet mask - 255.0.0.0
+connect pc to switch and switch to router with copper straight thruogh
 
+and connect the routers with Serial DEC wire
 
-Click on Router0 > CLI > router rip and version 2
-Click on Router0 > Config > RIP > Add Network Address.
-10.0.0.0
+pc0 
+ip 192.168.1.2
+def gat 192.168.1.1
+
+pc1
+ip 192.168.2.2
+def gat 192.168.2.1
+
+router0
+FE0
+ip 192.168.1.1
+ON
+serial0/0
+10.0.0.1
+64000
+ON
+rip
+version 2
 192.168.1.0
-
-Click on Router1 > CLI > router rip and version 2
-Click on Router1 > Config > RIP > Add Network Address.
 10.0.0.0
+
+router1
+FE0
+ip 192.168.2.1
+ON
+serial0/0
+10.0.0.2
+64000
+ON
+rip
+version 2
 192.168.2.0
+10.0.0.0
 
-Click on Router0 > Config > FastEthernet 0/1 > set IPv4 Address and On the Port 
-Status
-config => fastEthernet0/1=>
-IP address  - 20.0.0.1
-Subnet mask - 255.255.255.0   =>    on
+CHECK connectivity
 
-Click on the Wireless Router 0 > Setup > Basic Setup > Change IP Address and 
-Save Changes
-ipaddress 192.168.1.1
+Add wireless router WRT300N
 
-Click on the Wireless Router 0 > Wireless > Wireless Security > Security Mode = 
-WEP and Key1 = 2a2a2a2a2a
+connect it with Router0 and Switch0
 
-Click on PC2 > Physical > Turn OFF the PC > remove previous component and 
-replace with WMP300N.
+router0
+give ip to FE0 witch is connected to wireless router WRT300N
 
- Click on PC2 > Config > Wireless0 > In Authentication Click on WEP and WEP 
-Key = 2a2a2a2a2a
+20.0.0.1
 
-Click on Router0 > Config > RIP > Add New Network Address.
-ipaddress 20.0.0.0  ==>add
+add in rip
 
 
+WRT300N 
+GUI-> setup give ip 192.168.1.1 -> save changes
+GUI-> wireless set security WEP -> Pass 2a2a2a2a -> save changes
 
-check connection with pc0 to pc1 and to pc2
+add pc3
+
+change module to wireless one 
+
+go in pc3 -> config -> wireless change it to WEP -> give pass 2a2a2a2a
+
+check connectivity
+ 
