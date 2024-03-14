@@ -1,0 +1,14 @@
+<book name="xyz">
+<Author>
+xyz Author
+</Author>
+<publication>
+C publication
+</publication>
+<price>
+3000
+</price>
+<edition>
+edition 3
+</edition>
+</book>
